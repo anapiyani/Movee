@@ -1,0 +1,145 @@
+.reviews {
+    width: 100%;
+    height: 665px;
+    background-color: $yellow;
+    margin-top: 130px;
+
+    .reviews_content {
+        & .reviews_text {
+            display: flex;
+            justify-content: center;
+
+            & h2 {
+                margin-top: 100px;
+                color: $txt;
+                font-family: Montserrat;
+                font-size: $fz3;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+        }
+
+        & .reviews_items {
+            width: 100%;
+            height: 265px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+
+            & .reviews_item {
+                width: 100%;
+                height: 265px;
+                display: flex;
+
+                & .review {
+                    @include media-xl {
+                        &:last-child {
+                            display: none;
+                        }
+                    }
+
+                    @include media-md {
+                        &:last-child {
+                            display: none;
+                        }
+
+                        &:first-child {
+                            display: none;
+                        }
+                    }
+
+                    @include media-sm {
+                        &:last-child {
+                            display: none;
+                        }
+
+                        &:first-child {
+                            display: none;
+                        }
+                    }
+
+                    & .re_header_text {
+                        & p {
+                            color: $txt;
+                            font-family: Montserrat;
+                            font-size: $fz4;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                        }
+                    }
+
+                    & .re_stars {
+                        display: flex;
+                        align-items: start;
+                        margin-top: -10px;
+                        padding-bottom: 19px;
+
+                        & p {
+                            color: $txt;
+                            font-family: Montserrat;
+                            font-size: $fz6;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 131.4%;
+                            margin: 0;
+                        }
+
+                        & img {
+                            width: 78px;
+                            height: 16px;
+                            margin-left: 10px;
+                        }
+                    }
+
+                    & .re_text {
+                        width: 420px;
+
+                        @include media-sm {
+                            width: 300px;
+                        }
+                    }
+
+                    & .read_all {
+                        margin-top: 18px;
+
+                        & a {
+                            color: $txt;
+                            font-family: Montserrat;
+                            font-size: $fz6;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 131.4%;
+                            /* 21.024px */
+                        }
+                    }
+                }
+            }
+        }
+
+        & .buttons {
+            margin-top: 69px;
+            display: flex;
+            justify-content: center;
+
+            @include media-sm {
+                margin-top: 80px;
+            }
+
+            & button {
+                border: 1px solid #333;
+                width: 250px;
+                height: 50px;
+                flex-shrink: 0;
+                color: $txt;
+                font-family: Montserrat;
+                font-size: $fz2;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                background-color: transparent;
+            }
+        }
+    }
+}

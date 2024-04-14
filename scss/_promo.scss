@@ -1,0 +1,249 @@
+.promo {
+    margin-left: 30px;
+
+    @include media-sm {
+        margin: 0;
+    }
+
+    .promo_content {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 63px;
+        height: 422px;
+
+        @include media-md {
+            width: 100%;
+            margin-top: 0;
+            justify-content: center;
+        }
+
+        @include media-sm {
+            width: 100%;
+            margin-top: 0;
+            justify-content: center;
+        }
+
+        & .promo_main_content {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            text-align: start;
+            z-index: 2;
+            padding: 0;
+            margin: 0;
+
+            & .texts {
+                width: 480px;
+                height: 72px;
+                flex-shrink: 0;
+                margin: 0;
+
+                @include media-sm {
+                    width: 300px;
+
+                }
+
+                & h1 {
+                    color: $txt;
+                    font-family: Montserrat;
+                    font-size: 70px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 126.9%;
+
+                    @include media-md {
+                        font-size: 28px;
+                        text-align: center;
+                    }
+
+                    @include media-sm {
+                        font-size: 28px;
+                        text-align: center;
+                        width: 300px;
+                    }
+                }
+
+                & p {
+                    color: $txt;
+                    font-family: Montserrat;
+                    font-size: $fz3;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+
+                    @include media-md {
+                        color: $txt;
+                        font-size: 18px;
+                        text-align: center;
+                    }
+
+                    @include media-sm {
+                        color: $txt;
+                        font-size: 18px;
+                        text-align: center;
+                    }
+                }
+            }
+
+            & .button {
+                display: flex;
+                height: 0px;
+                margin-top: 50px;
+                margin: 0;
+
+                @include media-md {
+                    justify-content: center;
+                }
+
+                @include media-sm {
+                    justify-content: center;
+                }
+
+                & button {
+                    margin-left: 0;
+                    margin-top: 20px;
+                    width: 304px;
+                    height: 60px;
+                    flex-shrink: 0;
+                    background: $red;
+                    color: #F2F2F2;
+                    border: none;
+                    font-family: Montserrat;
+                    font-size: $fz4;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    position: relative;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        border: 2px solid #FFFFFF;
+                        box-sizing: border-box;
+                        z-index: -1;
+                        transform: translate(10px, 10px);
+
+                        @include media-sm {
+                            border: none;
+                        }
+                    }
+                }
+            }
+
+            & .about_content {
+                @include media-md {
+                    display: none;
+                }
+
+                @include media-sm {
+                    display: none;
+                }
+
+                .about_content_items {
+                    display: flex;
+                    width: 546px;
+                    height: 39px;
+
+                    & .about_item {
+                        margin-right: 40px;
+                        display: flex;
+
+                        & img {
+                            margin-right: 10px;
+                            width: 51px;
+                            height: 39px;
+                            margin-top: 5px;
+                        }
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .promo_images {
+            height: 308px;
+            flex-shrink: 0;
+            bottom: 120px;
+            z-index: 0;
+
+            @include media-md {
+                margin: 0;
+            }
+
+            @include media-sm {
+                margin: 0;
+            }
+
+            & img:first-child {
+                position: absolute;
+                width: 381px;
+                height: 608px;
+                left: 850px;
+                bottom: 0;
+                top: 42px;
+                z-index: 1;
+
+                @include media-xxl {
+                    left: 570px;
+                }
+
+                @include media-xl {
+                    left: 570px;
+                }
+
+                @include media-md {
+                    left: 100px;
+                    top: 145px;
+                    width: 248px;
+                    height: 396px;
+                }
+
+                @include media-sm {
+                    left: 50px;
+                    top: 160px;
+                    width: 238px;
+                    height: 386px;
+                }
+            }
+
+            & img:last-child {
+                position: absolute;
+                width: 499px;
+                height: 300px;
+                top: 160px;
+                left: 1000px;
+                right: 0;
+                bottom: 180px;
+
+                @include media-xxl {
+                    left: 750px;
+                }
+
+                @include media-xl {
+                    left: 500px;
+                }
+
+                @include media-md {
+                    display: block;
+                    left: 0;
+                    top: 230px;
+                }
+
+                @include media-sm {
+                    display: none;
+                }
+            }
+        }
+    }
+}
